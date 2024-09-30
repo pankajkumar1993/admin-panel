@@ -1,0 +1,19 @@
+// styles.scss
+@import 'variables';
+@import 'mixins';
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  @include box-shadow();
+  @include transition();
+}

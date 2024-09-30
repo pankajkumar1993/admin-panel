@@ -1,0 +1,33 @@
+.service-form {
+  max-width: 450px;
+}
+
+
+
+.nav-tabs .nav-link {
+  color: #6680C1;
+
+  &:hover, &:focus {
+    border-bottom: 1px solid inherit;
+  }
+}
+
+.nav-tabs .nav-link.active {
+  border: 0;
+  color: #003CD6 !important;
+  border-bottom: 1px solid #003CD6 !important;
+
+  &:hover {
+    border-bottom: 1px solid #003CD6;
+  }
+}
+
+.bg-tertiary {
+  background: #f8f9fa !important;
+}
+
+
+.table>thead tr th {
+  background: #F3F5F8;
+  white-space: nowrap;
+}

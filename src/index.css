@@ -1,0 +1,19 @@
+body,
+html {
+  background-color: #f6f5f5;
+  font-family: "DM Sans", sans-serif;
+}
+
+#root,
+body,
+html {
+  height: 100%;
+}
+
+input {
+  box-shadow: none !important;
+  &:disabled {
+    border:1px solid #E5E7EB;
+    background-color: #F9FAFB;
+  }
+}
