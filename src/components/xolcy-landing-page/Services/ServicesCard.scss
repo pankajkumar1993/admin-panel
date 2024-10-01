@@ -1,0 +1,33 @@
+@import "../variables";
+
+.our-services {
+  .card {
+    border: none; /* Remove default card border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: transform 0.2s ease; /* Add smooth hover effect */
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+
+    &:hover {
+      transform: translateY(-5px); /* Lift card slightly on hover */
+      background-color: $xolcy-primary-color;
+      .card-title,.card-text,a{
+        color:#fff;
+      }
+    }
+    
+  }
+  
+
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: $xolcy-primary-color; /* Purple color for icons */
+  }
+  
+  a {
+    color: $xolcy-primary-color;
+    text-decoration: none;
+  }
+}

@@ -1,11 +1,11 @@
 import React from 'react';
-import { Form, Button, Tabs, Tab } from 'react-bootstrap';
+import { Tabs, Tab } from 'react-bootstrap';
 import "./DenhanProject.scss"
 import { useLocation, useNavigate } from 'react-router-dom';
 import Twillio from '../../components/settings/Twillio';
 import PushNotificationsSettings from '../../components/settings/Notification';
 import GoogleSettings from '../../components/settings/GoogleSetting';
-import AppleSettings from '../../components/settings/Apple';
+import AppleSettings from '../../components/settings/AppleSettings';
 
 const HomePage: React.FC = () => {
 

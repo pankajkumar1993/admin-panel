@@ -1,0 +1,92 @@
+// /* src/index.css */
+// .login-container {
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .login-row {
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .login-form-col {
+//   background-color: #fff;
+//   padding: 20px;
+//   border-radius: 10px;
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+// }
+
+// .login-image-col {
+//   background-image: linear-gradient(to bottom right, #00c6ff, #0072ff);
+//   background-size: cover;
+//   background-position: center;
+//   padding: 20px;
+//   border-radius: 10px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .login-image {
+//   background-image: url('https://picsum.photos/200/300');
+//   background-size: cover;
+//   background-position: center;
+//   height: 100%;
+//   width: 100%;
+//   border-radius: 10px;
+// }
+
+// .login-image-overlay {
+//   background-color: rgba(0, 0, 0, 0.5);
+//   color: #fff;
+//   padding: 20px;
+//   border-radius: 10px;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .social-login {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 20px;
+// }
+
+// .social-login button {
+//   width: 48%;
+// }
+
+// .or {
+//   text-align: center;
+//   margin: 10px 0;
+//   font-size: 14px;
+//   color: #888;
+// }
+
+// .or::before,
+// .or::after {
+//   content: "";
+//   display: inline-block;
+//   height: 1px;
+//   background-color: #ccc;
+//   vertical-align: middle;
+//   width: 40%;
+//   margin: 0 5px;
+// }
+
+// .facebook-btn {
+//   background-color: #3b5998;
+//   color: #fff;
+// }
+
+// .google-btn {
+//   background-color: #db4437;
+//   color: #fff;
+// }

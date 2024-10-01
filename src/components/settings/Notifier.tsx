@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form';
-import { Button, Pagination, Tab, Table, Tabs } from 'react-bootstrap';
+import { Button, Pagination, Table } from 'react-bootstrap';
 import { INITIAL_PROJECTS, Project } from '../../views/home/projects';
 
 const Notifier = () => {

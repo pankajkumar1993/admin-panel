@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Col, Row, Container } from 'react-bootstrap';
+import { Form, Button, Col, Row } from 'react-bootstrap';
 
 const PushNotificationsSettings = () => {
   const [enablePushNotifications, setEnablePushNotifications] = useState(false);

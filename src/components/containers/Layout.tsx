@@ -22,7 +22,7 @@ const styles = {
   mainContent: {
     width: 'calc(100% - 250px)', // Adjust based on sidebar width
     transition: 'width 0.3s ease-in-out',
-    backgroundColor:'#fafafa'
+    backgroundColor: '#fafafa'
   },
 };
 
@@ -35,27 +35,27 @@ const Layout = () => {
 
   return (
     <div style={styles.container}>
-      <button 
-        style={{ ...styles.sidebarToggle, display: isSidebarOpen ? 'none' : 'block' }} 
+      <button
+        style={{ ...styles.sidebarToggle, display: isSidebarOpen ? 'none' : 'block' }}
         onClick={toggleSidebar}>
         Toggle Sidebar
       </button>
       {/* Sidebar */}
-      <div 
-      className='projects-section'
+      <div
+        className='projects-section'
         style={{
-          ...styles.sidebar, 
+          ...styles.sidebar,
           width: isSidebarOpen ? 250 : 0, // Conditional width
         }}
       >
-        <Sidebar /> 
+        <Sidebar />
       </div>
 
       {/* Main Content Area */}
-      <div 
-        style={{ 
-          ...styles.mainContent, 
-          width: isSidebarOpen ? 'calc(100% - 250px)' : '100%', 
+      <div
+        style={{
+          ...styles.mainContent,
+          width: isSidebarOpen ? 'calc(100% - 250px)' : '100%',
         }}
       >
         <Panel>

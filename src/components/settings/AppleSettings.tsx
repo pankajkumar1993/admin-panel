@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Col, Row, Container } from 'react-bootstrap';
+import { Form, Button, Col, Row } from 'react-bootstrap';
 
 const AppleSettings = () => {
   const [appleCredentials, setAppleCredentials] = useState({
@@ -23,9 +23,9 @@ const AppleSettings = () => {
     setAppleCredentials({ ...appleCredentials, [e.target.name]: e.target.value });
   };
 
-  const handlePushNotificationSettingsChange = (e: any) => {
-    setPushNotificationSettings({ ...pushNotificationSettings, [e.target.name]: e.target.value });
-  };
+  // const handlePushNotificationSettingsChange = (e: any) => {
+  //   setPushNotificationSettings({ ...pushNotificationSettings, [e.target.name]: e.target.value });
+  // };
 
   const handleAdditionalSettingsChange = (e: any) => {
     setAdditionalSettings({ ...additionalSettings, [e.target.name]: e.target.value });

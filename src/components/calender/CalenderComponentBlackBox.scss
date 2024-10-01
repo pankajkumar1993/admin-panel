@@ -1,0 +1,36 @@
+/* Add this CSS to your component's stylesheet */
+
+.calendar-container {
+  max-width: 340px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 123, 255, 0.06); /* Blue-tinted shadow */
+  backdrop-filter: blur(20px); /* Key for glassmorphism - adjust blur as needed */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+}
+
+.calendar-table {
+  width: 100%;
+  table-layout: fixed; /* For evenly spaced columns */
+}
+
+.calendar-table th, 
+.calendar-table td {
+  text-align: center;
+  padding: 10px;
+}
+
+.calendar-table th {
+  font-weight: 600;
+}
+.calendar-table td{
+  cursor: pointer;
+}
+
+.calendar-table .selected { /* Style for the selected date */
+  background-color: rgba(30, 144, 255, 1); /* Light blue with transparency */
+  color: white;
+  border-radius: 4px;
+ 
+}

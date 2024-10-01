@@ -1,0 +1,78 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fafb;
+}
+
+.login-box {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  padding: 40px;
+  text-align: center;
+  border-right: 1px solid #e6e6e6;
+}
+
+.signup-info {
+  background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 40px;
+}
+
+.signup-info h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.signup-info p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.signup-btn {
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  border: 2px solid white;
+}
+
+.brand-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.social-login-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+}

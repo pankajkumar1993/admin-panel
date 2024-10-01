@@ -3,7 +3,7 @@ import "./style.scss"
 import Logo from '../Logo';
 import { LogoutIcon } from '../icons/Logout';
 import SidebarLinks from './SidebarLinks';
-import CustomModal from '../CustomModal';
+import CustomModal from '../modal/CustomModal';
 import EditProfileForm from '../EditProfileForm';
 import PlusIcon from '../icons/PlusIcon';
 const Profile = () => {
