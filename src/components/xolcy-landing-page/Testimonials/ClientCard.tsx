@@ -1,14 +1,27 @@
 import React from 'react'
-
+import { motion } from 'framer-motion';
 export interface ClientCardProps {
   id: number, name: string, job: string, quote: string
 }
 
 const ClientCard: React.FC<ClientCardProps> = (testimonial) => {
-
+  const slideInVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+      },
+    },
+  };
   const { id, name, job, quote } = testimonial;
   return (
-    <div className="flex-row card p-4 h-100 gap-4" key={id}>
+    <motion.div initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={slideInVariants} className="flex-row card p-4 h-100 gap-4" key={id}>
       <div className="flex-shrink-0 d-flex flex-column justify-content-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +42,7 @@ const ClientCard: React.FC<ClientCardProps> = (testimonial) => {
       <div className='align-self-center'>
         <p className="text-secondary m-0 fs-5">{quote}</p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

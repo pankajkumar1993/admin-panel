@@ -1,33 +1,94 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import { motion } from 'framer-motion'; // Import Framer Motion
 import './MyNavbar.scss';
 import Arrow from '../icons/Arrow';
 
-function MyNavbar() {
+const MyNavbar: React.FC = () => {
+  // Animation variants for navbar links
+  const linkVariants = {
+    hidden: (index: number) => ({
+      opacity: 0,
+      y: index % 2 === 0 ? -20 : 20, // Alternate between top and bottom
+    }),
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  // Animation variants for buttons
+  const HeaderLinkVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: 'easeOut',
+      },
+    },
+  };
+
   return (
     <Navbar className="my-navbar" expand="lg">
       <Container>
         <Navbar.Brand href="#home" className="my-navbar-brand">
-          <span className="text-primary">
-            <span className="brand-logo">XOLCY</span>
-          </span>
+          <motion.div variants={HeaderLinkVariants} className="text-primary">
+            <span className="brand-logo fw-bold">XOLCY</span>
+          </motion.div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="my-navbar-toggle" />
         <Navbar.Collapse id="basic-navbar-nav" className="my-navbar-collapse">
           <Nav className="my-navbar-nav">
-            <Nav.Link href="#home" className="my-navbar-link">Home</Nav.Link>
-            <Nav.Link href="#services" className="my-navbar-link">Services</Nav.Link>
-            <Nav.Link href="#features" className="my-navbar-link">Features</Nav.Link>
-            <Nav.Link href="#clients" className="my-navbar-link">Clients</Nav.Link>
-            <Nav.Link href="#portfolio" className="my-navbar-link">Portfolio</Nav.Link>
-            <Nav.Link href="#pricing" className="my-navbar-link">Pricing</Nav.Link>
-            <Nav.Link href="#build" className="btn btn-primary d-lg-none text-white">Build Yours <Arrow/></Nav.Link>
+            {['Home', 'Services', 'Features', 'Clients', 'Portfolio', 'Pricing'].map((item, index) => (
+              <motion.div
+                key={index}
+                custom={index}
+                variants={linkVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+              >
+                <Nav.Link href={`#${item.toLowerCase()}`} className="my-navbar-link">
+                  {item}
+                </Nav.Link>
+              </motion.div>
+            ))}
+            <motion.div
+              custom={6}
+              variants={HeaderLinkVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false }}
+            >
+              <Nav.Link href="#build" className="btn btn-primary d-lg-none text-white">
+                Build Yours <Arrow />
+              </Nav.Link>
+            </motion.div>
           </Nav>
         </Navbar.Collapse>
-            <Nav.Link href="#build" className="btn btn-primary d-none d-lg-inline-block text-white">Build Yours <Arrow/></Nav.Link>
+        <motion.div
+          custom={7}
+          variants={HeaderLinkVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+        >
+          <Nav.Link href="#build" className="btn btn-primary d-none d-lg-inline-block text-white">
+            Build Yours <Arrow />
+          </Nav.Link>
+        </motion.div>
       </Container>
     </Navbar>
   );
-}
+};
 
 export default MyNavbar;

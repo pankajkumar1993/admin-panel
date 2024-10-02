@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 import './OurServices.scss';
 import ServicesCard, { ServicesCardProps } from './ServicesCard';
 import SectionHeading from '../SectionHeading/SectionHeading';
 
+// Services data
 const servicesData: ServicesCardProps[] = [
   {
     id: 1,
@@ -49,21 +51,57 @@ const servicesData: ServicesCardProps[] = [
   },
 ];
 
-const OurServices = () => {
+const OurServices: React.FC = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.6, ease: 'easeOut' },
+    },
+  };
+
   return (
     <section className="our-services">
       <Container>
         <Row className='justify-content-center'>
           <Col md={10} lg={8} xl={6}>
-            <SectionHeading title='Our Services' description='We craft digital, graphic and dimensional thinking, to create category leading brand experiences that have meaning and add a value for our clients.' align='center' />
+            <SectionHeading
+              title='Our Services'
+              description='We craft digital, graphic and dimensional thinking, to create category leading brand experiences that have meaning and add a value for our clients.'
+              align='center'
+            />
           </Col>
         </Row>
         <Row>
-          {servicesData.map((service) => (
-            <Col md={4} key={service.id} className="mb-4">
-              <ServicesCard {...service} />
-            </Col>
-          ))}
+          <motion.div
+            className="services-container row"
+            variants={containerVariants}
+            initial="hidden" // Start hidden
+            whileInView="visible" // Animate when in view while scrolling
+            viewport={{ amount: 0.2 }} // Trigger animation when 20% of the container is in view
+          >
+            {servicesData.map((service) => (
+              <Col md={4} key={service.id} className="mb-4">
+                <motion.div variants={cardVariants}>
+                  <ServicesCard {...service} />
+                </motion.div>
+              </Col>
+            ))}
+          </motion.div>
         </Row>
       </Container>
     </section>

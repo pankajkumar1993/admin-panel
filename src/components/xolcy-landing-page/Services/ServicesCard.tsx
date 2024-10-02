@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import "./ServicesCard.scss"
 import { Link } from 'react-router-dom';
 import Arrow from '../icons/Arrow';
@@ -24,7 +24,7 @@ const ServicesCard: React.FC<ServicesCardProps> = (service) => {
           <Card.Text>{description}</Card.Text>
         </div>
         <div className='mt-2'>
-          <Link to={url}>Learn More <Arrow/></Link>
+          <Link to={url}>Learn More <Arrow /></Link>
         </div>
       </Card.Body>
     </Card>
