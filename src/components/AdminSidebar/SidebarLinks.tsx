@@ -6,7 +6,7 @@ import ChevronOutlined from '../icons/ChevronOutlined';
 
 const SidebarLinks = () => {
   const location = useLocation();
-  const [showMore, setShowMore] = useState(false); // State to toggle "show more"
+  const [showMore, setShowMore] = useState(false); 
 
   const projects = [
     { name: 'Expin', path: '/expin' },
@@ -32,7 +32,6 @@ const SidebarLinks = () => {
           >
             <Link to={`${project.path}`} className='d-inline-block w-100'>{project.name}</Link>
           </li>
-          // ?test=adgjkas&demo=wuigjg&qwert=dfjkh
         ))}
         <li className='px-3'>
           <button className='show-more' onClick={() => setShowMore(!showMore)}>

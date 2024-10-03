@@ -43,12 +43,12 @@ const Notifier = () => {
           {projects.map((project) => (
             <tr key={project.id}>
               <td>
-                <Form.Check // prettier-ignore
+                <Form.Check 
                   type="switch"
                   id="custom-switch"
                   label=""
                   className='shadow-none'
-                  onChange={() => handleChange(project.id, project.status)} // Pass the project id and current status
+                  onChange={() => handleChange(project.id, project.status)} 
                   checked={project.status.toLowerCase() === "active"}
                 />
               </td>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Image, Button } from 'react-bootstrap';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { motion } from 'framer-motion';
 import "./Features.scss";
 import SectionHeading from '../SectionHeading/SectionHeading';
 import FeatureImage from "../../../assets/images/index.jpg";
@@ -10,7 +10,6 @@ import CardIcon from './Icons/CardIcon';
 import Arrow from '../icons/Arrow';
 
 const Features: React.FC = () => {
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -19,7 +18,7 @@ const Features: React.FC = () => {
       transition: {
         duration: 0.5,
         ease: 'easeOut',
-        staggerChildren: 0.3, // Adds delay between children animations
+        staggerChildren: 0.3,
       },
     },
   };
@@ -35,10 +34,10 @@ const Features: React.FC = () => {
         <Col md={6}>
           <motion.div
             className="feature-image position-relative"
-            variants={containerVariants} // Container animation for the image and stats
+            variants={containerVariants} 
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }} // Trigger when 30% of the section is in view
+            viewport={{ once: true, amount: 0.3 }} 
           >
             <motion.div variants={itemVariants}>
               <Image src={FeatureImage} fluid alt="features" />
@@ -58,7 +57,6 @@ const Features: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            {/* Section heading */}
             <motion.div variants={itemVariants}>
               <SectionHeading
                 title="Modern & Powerful Interface"
@@ -69,7 +67,6 @@ const Features: React.FC = () => {
               />
             </motion.div>
 
-            {/* List items */}
             <motion.ul
               className="list-unstyled mb-4 d-flex flex-column gap-3"
               variants={containerVariants}
@@ -84,7 +81,6 @@ const Features: React.FC = () => {
               ))}
             </motion.ul>
 
-            {/* Button */}
             <motion.div variants={itemVariants}>
               <Button variant="primary" href="#">
                 Learn more <Arrow />

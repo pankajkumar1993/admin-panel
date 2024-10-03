@@ -1,15 +1,14 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { motion } from 'framer-motion';
 import './MyNavbar.scss';
 import Arrow from '../icons/Arrow';
 
 const MyNavbar: React.FC = () => {
-  // Animation variants for navbar links
   const linkVariants = {
     hidden: (index: number) => ({
       opacity: 0,
-      y: index % 2 === 0 ? -20 : 20, // Alternate between top and bottom
+      y: index % 2 === 0 ? -20 : 20, 
     }),
     visible: {
       opacity: 1,
@@ -21,7 +20,6 @@ const MyNavbar: React.FC = () => {
     },
   };
 
-  // Animation variants for buttons
   const HeaderLinkVariants = {
     hidden: {
       opacity: 0,
@@ -62,19 +60,19 @@ const MyNavbar: React.FC = () => {
                 </Nav.Link>
               </motion.div>
             ))}
-            <motion.div
+            {/* <motion.div
               custom={6}
               variants={HeaderLinkVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false }}
             >
-              <Nav.Link href="#build" className="btn btn-primary d-lg-none text-white">
+              <Nav.Link href="#build" className="btn btn-primary d-block d-lg-none text-white">
                 Build Yours <Arrow />
               </Nav.Link>
-            </motion.div>
+            </motion.div> */}
           </Nav>
-        </Navbar.Collapse>
+        
         <motion.div
           custom={7}
           variants={HeaderLinkVariants}
@@ -86,6 +84,7 @@ const MyNavbar: React.FC = () => {
             Build Yours <Arrow />
           </Nav.Link>
         </motion.div>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

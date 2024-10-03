@@ -12,7 +12,6 @@ const Twillio = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Submit form logic here
   };
 
   return (

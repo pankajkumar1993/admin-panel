@@ -1,4 +1,3 @@
-// src/Login.js
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
@@ -9,11 +8,9 @@ function Login1() {
 
   const handleSubmit = (event:any) => {
     event.preventDefault();
-    // Add your login logic here
     if (username === '' || password === '') {
       setError('Please enter both username and password');
     } else {
-      // Call your API to login
       console.log('Login successful');
     }
   };

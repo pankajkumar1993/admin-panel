@@ -23,7 +23,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({ subTitle, title, descri
         className='subtitle-text text-uppercase fw-medium mb-1'
         initial="hiddenLeft"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }} // Set once: false
+        viewport={{ once: false, amount: 0.3 }} 
         variants={animationVariants}
       >
         {subTitle}
@@ -33,7 +33,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({ subTitle, title, descri
         className="mb-2 fw-semibold"
         initial="hiddenRight"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }} // Set once: false
+        viewport={{ once: false, amount: 0.3 }} 
         variants={animationVariants}
       >
         {title}
@@ -43,7 +43,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({ subTitle, title, descri
         className={`${marginBottom} text-muted`}
         initial="hiddenLeft"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.3 }} // Set once: false
+        viewport={{ once: false, amount: 0.3 }} 
         variants={animationVariants}
       >
         {description}

@@ -19,7 +19,7 @@ const Home: React.FC<ProjectSettingsProps> = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const query = new URLSearchParams(location.search);
-  const currentTab = query.get('tab') || 'Twilio'; // Default to 'Twilio'
+  const currentTab = query.get('tab') || 'Twilio'; 
 
   const handleTabChange = (tab: string | null) => {
 

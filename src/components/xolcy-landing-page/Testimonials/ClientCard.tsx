@@ -21,7 +21,7 @@ const ClientCard: React.FC<ClientCardProps> = (testimonial) => {
     <motion.div initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      variants={slideInVariants} className="flex-row card p-4 h-100 gap-4" key={id}>
+      variants={slideInVariants} className="flex-md-row card p-4 h-100 gap-4" key={id}>
       <div className="flex-shrink-0 d-flex flex-column justify-content-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"

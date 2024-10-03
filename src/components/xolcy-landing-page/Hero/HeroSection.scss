@@ -5,7 +5,6 @@
   background-image: url("../../../assets//images//hero-one-3-bg.png");
   background-position: center 0px;
   background-repeat: no-repeat;
-  /* Light background color */
   height: calc(100vh - 78px);
   display: flex;
   justify-content: center;
@@ -19,17 +18,15 @@
     background-color: rgba($xolcy-primary-color, 0.1);
   }
 
-  .hero-title {
-    /* Add your desired title styles */
-  }
+  // .hero-title {
+  // }
 
   .hero-description {
     color: $xolcy-text-color;
   }
 
-  .hero-buttons {
-    /* Add spacing or layout styles to the button group */
-  }
+  // .hero-buttons {
+  // }
 }
 
 

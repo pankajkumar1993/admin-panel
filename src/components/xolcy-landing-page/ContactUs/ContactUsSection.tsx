@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { motion } from 'framer-motion';
 import './ContactUsSection.scss';
 import SectionHeading from '../SectionHeading/SectionHeading';
 
@@ -25,11 +25,9 @@ const ContactUsSection: React.FC = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission, e.g., send data to API
     console.log(formData);
   };
 
-  // Framer Motion animation variants
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -57,8 +55,8 @@ const ContactUsSection: React.FC = () => {
       className="contact-us-container"
       variants={containerVariants}
       initial="hidden"
-      whileInView="visible"  // Trigger animation when section is in view
-      viewport={{ once: false, amount: 0.2 }} // Trigger multiple times when 20% of the section is visible
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }}
     >
       <Container>
         <Row>

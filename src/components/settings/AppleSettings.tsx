@@ -23,9 +23,7 @@ const AppleSettings = () => {
     setAppleCredentials({ ...appleCredentials, [e.target.name]: e.target.value });
   };
 
-  // const handlePushNotificationSettingsChange = (e: any) => {
-  //   setPushNotificationSettings({ ...pushNotificationSettings, [e.target.name]: e.target.value });
-  // };
+
 
   const handleAdditionalSettingsChange = (e: any) => {
     setAdditionalSettings({ ...additionalSettings, [e.target.name]: e.target.value });
@@ -49,7 +47,6 @@ const AppleSettings = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    // Handle form submission here
   };
 
   return (

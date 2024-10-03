@@ -10,7 +10,6 @@ const AccountNotifer: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    // Handle form submission here, e.g., send data to API
     console.log('Title:', title);
     console.log('Description:', description);
   };

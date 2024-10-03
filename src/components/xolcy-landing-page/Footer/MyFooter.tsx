@@ -1,11 +1,10 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { motion } from 'framer-motion';
 import './MyFooter.scss';
 import { Link } from 'react-router-dom';
 
 const MyFooter = () => {
-  // Animation variants for list items
   const listVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -14,7 +13,7 @@ const MyFooter = () => {
       transition: {
         duration: 0.5,
         ease: 'easeOut',
-        staggerChildren: 0.2, // Stagger the children animations
+        staggerChildren: 0.2,
       },
     },
   };
@@ -30,7 +29,6 @@ const MyFooter = () => {
     },
   };
 
-  // Animation variants for heading and paragraph
   const headingVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -107,9 +105,9 @@ const MyFooter = () => {
       <Container>
         <Row>
           <Col xs={12}>
-            <div className='d-flex justify-content-between align-items-center'>
+            <div className='d-flex flex-column flex-md-row justify-content-between align-items-center'>
               <p>&copy; {new Date().getFullYear()} Your Company Name</p>
-              <ul className="list-unstyled d-flex footer-links">
+              <ul className="list-unstyled d-flex flex-column flex-sm-row footer-links">
                 <motion.li variants={listItemVariants} initial="hidden" whileInView="visible" viewport={{ once: false }}>
                   <Link to="">Terms of Service</Link>
                 </motion.li>

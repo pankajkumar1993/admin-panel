@@ -37,7 +37,6 @@ const GoogleSettings = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    // Handle form submission here
   };
 
   return (

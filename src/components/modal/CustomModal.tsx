@@ -5,7 +5,7 @@ interface CustomModalProps {
   show: boolean;
   handleClose: () => void;
   title: string;
-  children: ReactNode;  // Accept any child component
+  children: ReactNode;  
 }
 
 const CustomModal: React.FC<CustomModalProps> = ({ show, handleClose, title, children }) => {

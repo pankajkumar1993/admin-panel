@@ -11,7 +11,6 @@ function SMSTable() {
       dateTime: '15-05-24 16:18:55',
       status: 'Delivered',
     },
-    // Add more SMS data here as needed
   ];
 
   return (

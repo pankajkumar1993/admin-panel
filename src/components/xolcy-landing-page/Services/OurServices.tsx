@@ -5,7 +5,6 @@ import './OurServices.scss';
 import ServicesCard, { ServicesCardProps } from './ServicesCard';
 import SectionHeading from '../SectionHeading/SectionHeading';
 
-// Services data
 const servicesData: ServicesCardProps[] = [
   {
     id: 1,
@@ -52,7 +51,6 @@ const servicesData: ServicesCardProps[] = [
 ];
 
 const OurServices: React.FC = () => {
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -90,9 +88,9 @@ const OurServices: React.FC = () => {
           <motion.div
             className="services-container row"
             variants={containerVariants}
-            initial="hidden" // Start hidden
-            whileInView="visible" // Animate when in view while scrolling
-            viewport={{ amount: 0.2 }} // Trigger animation when 20% of the container is in view
+            initial="hidden" 
+            whileInView="visible" 
+            viewport={{ amount: 0.2 }} 
           >
             {servicesData.map((service) => (
               <Col md={4} key={service.id} className="mb-4">

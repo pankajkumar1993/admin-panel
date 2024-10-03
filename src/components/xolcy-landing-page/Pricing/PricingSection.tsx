@@ -43,7 +43,6 @@ const PricingSection = () => {
     },
   ];
 
-  // Animation variants for the pricing cards
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -56,7 +55,6 @@ const PricingSection = () => {
     },
   };
 
-  // Animation variants for price
   const priceVariants = {
     hidden: { opacity: 0, scale: 0.5 },
     visible: {
@@ -69,7 +67,6 @@ const PricingSection = () => {
     },
   };
 
-  // Animation variants for price description
   const priceDescVariants = {
     hidden: { opacity: 0, y: 10 },
     visible: {
@@ -82,7 +79,6 @@ const PricingSection = () => {
     },
   };
 
-  // List animation with stagger effect
   const listVariants = {
     hidden: {},
     visible: {
@@ -101,7 +97,6 @@ const PricingSection = () => {
     },
   };
 
-  // Button animation with delay
   const buttonVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: {
@@ -134,7 +129,6 @@ const PricingSection = () => {
                 className="pricing-card h-100 d-flex flex-column"
                 initial="hidden"
                 whileInView="visible"
-                // Set once to false to trigger animations every time the card comes into view
                 viewport={{ once: false, amount: 0.2 }}
                 variants={cardVariants}
               >
@@ -147,12 +141,10 @@ const PricingSection = () => {
                   </motion.h5>
                 </div>
 
-                {/* Motion ul for staggered list items */}
                 <motion.ul
                   className="pricing-description mt-2 flex-grow-1"
                   initial="hidden"
                   whileInView="visible"
-                  // Set once to false to trigger animations every time the list comes into view
                   viewport={{ once: false, amount: 0.2 }}
                   variants={listVariants}
                 >

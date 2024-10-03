@@ -6,21 +6,21 @@ import Panel from '../Panel';
 const styles = {
   container: {
     display: 'flex',
-    height: '100vh', // Ensure full viewport height
+    height: '100vh', 
   },
   sidebar: {
-    width: 250, // Default sidebar width
-    transition: 'width 0.3s ease-in-out', // Smooth transition for sidebar
+    width: 250, 
+    transition: 'width 0.3s ease-in-out', 
   },
-  sidebarToggle: { // Styles for the toggle button
-    display: 'block', // Ensure visibility on smaller screens
+  sidebarToggle: { 
+    display: 'block', 
     padding: '10px',
     backgroundColor: '#ccc',
     border: 'none',
     cursor: 'pointer',
   },
   mainContent: {
-    width: 'calc(100% - 250px)', // Adjust based on sidebar width
+    width: 'calc(100% - 250px)',
     transition: 'width 0.3s ease-in-out',
     backgroundColor: '#fafafa'
   },
@@ -45,7 +45,7 @@ const Layout = () => {
         className='projects-section'
         style={{
           ...styles.sidebar,
-          width: isSidebarOpen ? 250 : 0, // Conditional width
+          width: isSidebarOpen ? 250 : 0, 
         }}
       >
         <Sidebar />

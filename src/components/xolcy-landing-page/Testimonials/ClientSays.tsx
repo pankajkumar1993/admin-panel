@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-// Import Framer Motion
 import './ClientSays.scss';
 import ClientCard, { ClientCardProps } from './ClientCard';
 import SectionHeading from '../SectionHeading/SectionHeading';
@@ -41,9 +40,6 @@ const testimonials: ClientCardProps[] = [
 ];
 
 const ClientSays = () => {
-  // Animation Variants for the Slide In Effect
-
-
   return (
     <section className="py-5">
       <Container>

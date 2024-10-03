@@ -3,10 +3,9 @@ import './StatsSection.scss';
 import { Col, Container, Row } from 'react-bootstrap';
 import ProjectsIcon from './icons/ProjectsIcon';
 import CountUp from 'react-countup';
-import { motion } from 'framer-motion'; // Import framer-motion for animations
+import { motion } from 'framer-motion'; 
 
 const StatsSection = () => {
-  // Variants for the icon coming from the left
   const iconVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: {
@@ -19,7 +18,6 @@ const StatsSection = () => {
     },
   };
 
-  // Variants for the description coming from the right
   const descriptionVariants = {
     hidden: { opacity: 0, x: 50 },
     visible: {
@@ -38,12 +36,11 @@ const StatsSection = () => {
         <Row className="stats-container">
           <Col xs={12} md={3}>
             <div className="text-center">
-              {/* Motion for the icon coming from the left */}
               <motion.div
                 className="text-white mb-3"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }} // Set once: false to trigger on every scroll
+                viewport={{ once: false }} 
                 variants={iconVariants}
               >
                 <ProjectsIcon />
@@ -51,12 +48,11 @@ const StatsSection = () => {
               <h2 className="stats-number mb-1">
                 <CountUp end={2570} duration={2.5} suffix="+" />
               </h2>
-              {/* Motion for description coming from the right */}
               <motion.p
                 className="stats-text"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }} // Set once: false to trigger on every scroll
+                viewport={{ once: false }} 
                 variants={descriptionVariants}
               >
                 Projects Done
@@ -70,7 +66,7 @@ const StatsSection = () => {
                 className="text-white mb-3"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }} // Set once: false to trigger on every scroll
+                viewport={{ once: false }} 
                 variants={iconVariants}
               >
                 <ProjectsIcon />
@@ -82,7 +78,7 @@ const StatsSection = () => {
                 className="stats-text"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }} // Set once: false to trigger on every scroll
+                viewport={{ once: false }} 
                 variants={descriptionVariants}
               >
                 Awards Wins
@@ -96,7 +92,7 @@ const StatsSection = () => {
                 className="text-white mb-3"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }} // Set once: false to trigger on every scroll
+                viewport={{ once: false }} 
                 variants={iconVariants}
               >
                 <ProjectsIcon />
@@ -108,7 +104,7 @@ const StatsSection = () => {
                 className="stats-text"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }} // Set once: false to trigger on every scroll
+                viewport={{ once: false }} 
                 variants={descriptionVariants}
               >
                 Happy Clients
@@ -122,7 +118,7 @@ const StatsSection = () => {
                 className="text-white mb-3"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }} // Set once: false to trigger on every scroll
+                viewport={{ once: false }} 
                 variants={iconVariants}
               >
                 <ProjectsIcon />
@@ -134,7 +130,7 @@ const StatsSection = () => {
                 className="stats-text"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }} // Set once: false to trigger on every scroll
+                viewport={{ once: false }} 
                 variants={descriptionVariants}
               >
                 Country

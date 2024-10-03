@@ -6,19 +6,15 @@ import { sanitizeAndCapitalize } from '../utils/commonFunctions'
 
 const ProjectDetail = () => { 
   const {pathname} = useLocation();
-  // console.log(pathname, "pathname");
   
    const [projectKey] = useState('7eD6955f-3wes87-45n89cn-52f6w4d2');
    
    const handleRegenerateProjectKey = () => {
-    // Regenerate project key logic here
   };
 
   const handleCopy = () => {
     navigator.clipboard.writeText(projectKey)
       .then(() => {
-        // console.log('Copied to clipboard:', projectKey);
-        // Optionally, you can show a success message here
         alert('Copied to clipboard successfully');
       })
       .catch(err => {

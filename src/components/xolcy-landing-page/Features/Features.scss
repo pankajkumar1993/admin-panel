@@ -6,8 +6,6 @@
 }
 
 
-
-
 .feature-image {
   max-width: max(75%, 300px);
   aspect-ratio: 1/1;
@@ -29,7 +27,6 @@
   display: flex;
   align-items: center;
 }
-
 
 
 .features .heading {
@@ -70,4 +67,10 @@
   right: -50%;
   bottom: 50px;
   background: $xolcy-primary-color;
+
+  @include respond(xs){
+    position: unset;
+    transform: unset;
+    margin-block: 16px;
+  }
 }

@@ -1,9 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { motion } from 'framer-motion';
 import './LogosSection.scss';
 
-// Logo data in JSON format
 const logos = [
   {
     src: 'https://themesdesign.in/xolcy/layout/images/brand-logo-1.png',
@@ -24,7 +23,6 @@ const logos = [
 ];
 
 const LogosSection = () => {
-  // Animation variants for logos
   const logoVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -48,11 +46,11 @@ const LogosSection = () => {
                 alt={logo.alt}
                 className="img-fluid"
                 initial="hidden"
-                whileInView="visible" // Trigger animation when in view
-                viewport={{ once: false, amount: 0.2 }} // Allow re-triggering the animation when scrolling
+                whileInView="visible" 
+                viewport={{ once: false, amount: 0.2 }} 
                 variants={logoVariants}
-                onAnimationStart={() => console.log(`${logo.alt} animation started`)} // Debugging line
-                onAnimationComplete={() => console.log(`${logo.alt} animation completed`)} // Debugging line
+                onAnimationStart={() => console.log(`${logo.alt} animation started`)} 
+                onAnimationComplete={() => console.log(`${logo.alt} animation completed`)} 
               />
             </Col>
           ))}

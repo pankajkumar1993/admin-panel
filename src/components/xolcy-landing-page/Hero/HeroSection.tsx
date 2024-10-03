@@ -13,7 +13,7 @@ const HeroSection = () => {
   };
 
   return (
-    <header>
+    <header className=''>
       <MyNavbar />
       <div className='py-5'></div>
       <section className="hero py-5 position-relative">
